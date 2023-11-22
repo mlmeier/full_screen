@@ -18,18 +18,22 @@
 
 
 
-<body>
+<body onload="time()">
     <a href = "#main" id="skip">Skip to Main content</a>
    
     <nav>
     
         <ul> 
+           
             <li><i class="material-icons">favorite</i><a id="index" href="index.html">Home/Travel</a></li>
             <li><a href="recipies.html">Recipies</a></li>
             <li><a href="pets.html">Pets</a></li>
+            <li id="txt"></li>
+            
         </ul>
       </nav>
       <header></i><h1>Travel</h1></header>
+      
     <main id="main">
 
         <div >
@@ -202,5 +206,12 @@
     </main>
 </body>
 <footer></footer>
-<script ></script>
+<script>
+    function time() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      document.getElementById('txt').innerHTML =  h + ":" + m;   
+    }
+    </script>
 </html>

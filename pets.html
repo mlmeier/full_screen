@@ -13,6 +13,7 @@
 
     <title> Pets</title>
 </head>
+<body onload="time()">
 <a href = "#main" id="skip">Skip to Main content</a>
 <nav>
     
@@ -21,6 +22,7 @@
         <li><a href="index.html">Home/Travel</a></li>
         <li><a href="recipies.html">Recipies</a></li>
         <li><i class="material-icons">favorite</i><a id="pets" href="pets.html">Pets</a></li>
+        <li id="txt"></li>
     </ul>
   </nav>
 <header><h1>Pets</h1></header>
@@ -194,4 +196,13 @@
            
           </form>
 </main>
+</body>
 <footer></footer>
+<script>
+    function time() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      document.getElementById('txt').innerHTML =  h + ":" + m;   
+    }
+    </script>

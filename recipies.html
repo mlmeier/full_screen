@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title> Recipies</title>
 </head>
-<body>
+<body onload="time()">
     <a href = "#main" id="skip">Skip to Main content</a>
     <nav>
         
@@ -22,19 +22,24 @@
             <li><a href="index.html">Home/Travel</a></li>
             <li><i class="material-icons">favorite</i><a id="recipies" href="recipies.html">Recipies</a></li>
             <li><a href="pets.html">Pets</a></li>
+            <li id="txt"></li>
         </ul>
       </nav>
     <header><h1>Recipies</h1></header>
     <main id = "main">
         <div>
             <h2>Double Chocolate Cookies</h2>
-            <span>Origin: Michigan</span>
-            <span>Source: Family Recipe</span>
-            <span>Category: Dessert</span>
+            <details><summary>Click for Recipe Details</summary>
+                <span>Origin: Michigan</span>
+                <span>Source: Family Recipe</span>
+                <span>Category: Dessert</span>
+            </details>
+          
     
             <img class="mainfoodimg" src="images/double_chocolate_cookies.png" width = "200" alt="chocolate chip cookies">
             <p>My daughter learned to make these cookies at a baking camp at Zingermanns and has tweaked the recipe to fit the taste buds of her siblings.  They are extremely sugary so the salt helps to balance it.  Note, these cookies are best eaten very quickly.</p>
             <h3>Recipe Ingredients</h3>
+            
             <ul class="ingredients">
                 <li>Unsalted butter</li>
                 <li>Granulated Sugar</li>
@@ -71,10 +76,12 @@
         </div>
         <div>
             <h2>Pesto Pasta</h2>
+            <details><summary>Click for Recipe Details</summary>
+
             <span>Origin: Italian</span>
             <span>Source: www.simplyrecipes.com</span>
             <span>Category: Main Dish</span>
-    
+        </details>
             <img class="mainfoodimg" src="images/pesto_pasta.jpg" width = "200" alt="pesto">
             <p>Pesto pasta has always been a comfort dish for me; it’s quick, it’s easy, and great food for a dinner party or a comfy night in! It requires six main ingredients, plus additional spices as you see fit. If you’re not in the mood for pasta, you can always eat the pesto sauce on bread, crackers, or eggs! This recipe makes enough for around 4 people, so adjust accordingly. </p>
             <h3>Recipe Ingredients</h3>
@@ -111,10 +118,12 @@
         </div>
         <div>
             <h2>Crunchwrap Supreme Recipe</h2>
+            <details><summary>Click for Recipe Details</summary>
+
             <span>Origin: Taco Bell(Fake Mexican)</span>
             <span>Source: Taco Bell Website</span>
             <span>Category: Comfort Dish</span>
-    
+        </details>
             <img class="mainfoodimg"  src="images/Crunchwrap_Supreme.png" width = "200" alt="crunchwrap">
             <p>Despite the noticeable price increase attributed to inflation, I'm an avid Taco Bell fan. There's an undeniable satisfaction in indulging in a Crunchwrap Supreme whenever hunger strikes. Fusing a traditional Mexican taco with a generously sized flattened burrito creates a symphony of flavors that resonates perfectly with my taste buds. The mere thought of it sets my stomach on a journey of anticipation, as each bite combines the comforting essence of familiar ingredients in a novel and exciting way. Yo quiero Taco Bell.</p>
             <h3>Recipe Ingredients</h3>
@@ -153,12 +162,21 @@
     
         </div>
         <form>
-            <i class="glyphicon glyphicon-envelope"></i>
+           
             <label for="email">Enter email for updates:</label>
             <input type="text" id="email" name="email"><br>
            
           </form>
     </main>
 </body>
+
 <footer></footer>
+<script>
+    function time() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      document.getElementById('txt').innerHTML =  h + ":" + m;   
+    }
+    </script>
 </html>
